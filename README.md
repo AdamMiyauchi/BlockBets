@@ -1,16 +1,17 @@
 # BlockBets
 
 # How to setup and run the aplication
-Demo application is available at https://self-assured-webbed-lemming.anvil.app/. Before you can interact with the application you need to connect to MetaMask and Sepolia following step (1) below. If you want to manually compile the application follow the below steps. 
+Demo application is available at https://self-assured-webbed-lemming.anvil.app/. Before you can interact with the application you need to connect to MetaMask and Sepolia following step (1) below. If you want to manually compile the application from scratch follow steps (1) through (3) below. 
 
 ## 1) Connecting to MetaMask and Sepolia
 1) Install the MetaMask Chrome extension
-2) Add a a new network
+2) Add a a new network in MetaMask
     - RPC: `https://eth-sepolia.g.alchemy.com/v2/9H0qMRUY9eb3brffXCJAoNXXK94v7E4F` 
     - Chain ID: `11155111`
     - Currency Symbol: `ETH`
     - Block Explorer: `https://sepolia.etherscan.io/`
 3) Acquire free test network ETH from `https://sepoliafaucet.com/`
+
 
 ## 2) Running the Blockchain Smart Contract using Remix IDE
 1) Upload the smart contract, `BlockBets/blockchain_code/BetApp.sol`, to Remix IDE. 
