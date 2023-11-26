@@ -1,0 +1,95 @@
+container: {type: ColumnPanel}
+components:
+- name: outlined_card_1
+  properties: {role: outlined-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'GYCQVU,QAEVFW'}
+  components:
+  - name: linear_panel_1
+    properties: {}
+    type: LinearPanel
+    layout_properties: {grid_position: 'AMGMAL,EOLYRT'}
+    components:
+    - name: label_1
+      properties: {text: 'Place a new bet:', role: title}
+      type: Label
+  - name: match_time
+    properties: {text: ''}
+    type: Label
+    layout_properties: {grid_position: 'YDYTBW,YBKAEN'}
+  - name: flow_panel_opponents
+    properties: {vertical_align: middle}
+    type: FlowPanel
+    layout_properties: {grid_position: 'RKEALX,LSOZRH'}
+    components:
+    - name: opponentA
+      properties: {}
+      type: Label
+      data_bindings: []
+    - name: opponentA_image
+      properties: {height: 105}
+      type: Image
+      layout_properties: {width: 178}
+    - name: label_2
+      properties: {text: VS}
+      type: Label
+    - name: opponentB
+      properties: {}
+      type: Label
+    - name: opponentB_image
+      properties: {height: 104}
+      type: Image
+      layout_properties: {width: 231}
+  - name: column_panel_1
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'VLZBPF,SMCXHO'}
+    components:
+    - name: bet_type
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'LLWUPI,BMWDUE'}
+    - name: odds
+      properties: {align: left}
+      type: Label
+      layout_properties: {grid_position: 'LLWUPI,ATVBMK'}
+  - name: flow_panel_1
+    properties: {}
+    type: FlowPanel
+    layout_properties: {grid_position: 'ZWAXYB,OFSHTK'}
+    components:
+    - name: label_3
+      properties: {text: 'Bet amount (Finney): '}
+      type: Label
+      layout_properties: {}
+    - name: bet_amount
+      properties: {placeholder: $100, role: null, type: number}
+      type: TextBox
+      layout_properties: {width: 257}
+    - name: error_label
+      properties: {content: Bet amount must be positive!, format: plain_text, visible: false,
+        foreground: 'theme:Error'}
+      type: RichText
+  - name: button_row
+    properties: {col_spacing: huge}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'CUWAYW,XSFGCF'}
+    components:
+    - name: cancel
+      properties: {text: Cancel, role: outlined-button, align: full}
+      type: Button
+      layout_properties: {grid_position: 'KXIVKC,CGJPLI'}
+      event_bindings: {click: cancel_click}
+    - name: place_bet
+      properties: {text: 'Place Bet
+
+          ', role: outlined-button, align: full}
+      type: Button
+      layout_properties: {grid_position: 'KXIVKC,YXLPDG'}
+      event_bindings: {click: place_bet_click}
+    - name: sc_error
+      properties: {align: center, text: There was an error placing your bet. Please try again later.,
+        role: input-prompt, foreground: 'theme:Error', visible: false}
+      type: Label
+      layout_properties: {grid_position: 'VUOIBQ,MKPLQK'}
+is_package: true

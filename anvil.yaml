@@ -1,0 +1,51 @@
+correct_dependency_ids: {}
+dependencies: []
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {}
+startup: {type: form, module: BetBook}
+package_name: CSE_598_Project
+allow_embedding: false
+name: CSE 598 Project
+runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
+  server_spec: null}
+metadata: {title: Block Bets, logo_img: 'https://www.egr.global/intel/wp-content/uploads/sites/2/2022/08/iStock-1339870128.jpg'}
+startup_form: null
+native_deps: {head_html: '<script src="https://cdnjs.cloudflare.com/ajax/libs/web3/4.2.2/web3.min.js"
+    integrity="sha512-YD0p/mrfISfNjG4WS/8Dx1h6hZx0/IgCFJfQR8lSXf/y29Jy+JcZj1s65/Ar22xBwvK8xe1u1BQ/w2E2Edr22Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>'}
+db_schema:
+  users:
+    client: none
+    server: full
+    columns:
+    - name: email
+      admin_ui: {order: 0, width: 200}
+      type: string
+    - name: enabled
+      admin_ui: {order: 1, width: 200}
+      type: bool
+    - name: last_login
+      admin_ui: {order: 2, width: 200}
+      type: datetime
+    - name: password_hash
+      admin_ui: {order: 3, width: 200}
+      type: string
+    - name: n_password_failures
+      admin_ui: {order: 4, width: 200}
+      type: number
+    - name: confirmed_email
+      admin_ui: {order: 5, width: 200}
+      type: bool
+    - name: signed_up
+      admin_ui: {order: 6, width: 200}
+      type: datetime
+    - name: name
+      admin_ui: {width: 200, order: 7}
+      type: string
+    - name: link_key
+      admin_ui: {width: 200, order: 8}
+      type: string
+    title: Users
+renamed: true

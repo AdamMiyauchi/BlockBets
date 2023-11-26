@@ -1,0 +1,7 @@
+[INFO  io.zonky.test.db.postgres.embedded.EmbeddedPostgres] Detected a Darwin aarch64 system
+[INFO  io.zonky.test.db.postgres.embedded.DefaultPostgresBinaryResolver] Detected distribution: 'Unknown'
+[TRACE io.zonky.test.db.postgres.embedded.DefaultPostgresBinaryResolver] Searching for postgres binaries - location: 'postgres-darwin-arm_64.txz'
+[TRACE io.zonky.test.db.postgres.embedded.DefaultPostgresBinaryResolver] Searching for postgres binaries - location: 'postgres-darwin-x86_64.txz'
+[WARN  io.zonky.test.db.postgres.embedded.DefaultPostgresBinaryResolver] No native binaries supporting aarch64 architecture found. Trying to use binaries for amd64 architecture instead: 'postgres-darwin-x86_64.txz'. Make sure you have Rosetta 2 emulation enabled. Note that performance may be degraded.
+[INFO  io.zonky.test.db.postgres.embedded.EmbeddedPostgres] Postgres binaries at .anvil-data/db-bin/PG-a2a9bc65661eac6f108fc920268a87b3
+[TRACE io.zonky.test.db.postgres.embedded.EmbeddedPostgres] 6ac8eed9-314a-4334-9573-eef2e3cdbc05 postgres data directory is .anvil-data/db

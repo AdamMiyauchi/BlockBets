@@ -1,0 +1,85 @@
+is_package: true
+container:
+  type: ColumnPanel
+  properties: {visible: true}
+components:
+- name: match
+  properties: {}
+  type: LinearPanel
+  layout_properties: {grid_position: 'MKETVL,XDOVPM'}
+  components:
+  - name: match_time
+    properties: {align: center, text: Match Time, foreground: 'theme:Primary', font_size: 20}
+    type: Label
+    layout_properties: {}
+    data_bindings:
+    - {property: text, code: '''Match Time: '' + self.item[''match_time'']', writeback: false}
+  - name: flow_panel_match_info
+    properties: {spacing: huge, vertical_align: middle, spacing_below: medium, align: center,
+      background: ''}
+    type: FlowPanel
+    components:
+    - name: opponent1_img
+      properties: {height: '80', source: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbz49jfzelLcn17vVACrpwjD7lDBCGriaggg&usqp=CAU',
+        spacing_above: medium, spacing_below: medium}
+      type: Image
+      layout_properties: {width: 202}
+      data_bindings:
+      - {property: source, code: 'self.item[''opponentA_image'']', writeback: false}
+    - name: opponent1_name
+      properties: {text: A, foreground: 'theme:On Primary Container', font_size: 25,
+        bold: false, border: '', align: center}
+      type: Label
+      data_bindings:
+      - {property: text, code: 'self.item[''opponentA'']', writeback: false}
+      layout_properties: {}
+    - name: label_1
+      properties: {text: VS, align: center, underline: false, italic: true, bold: false,
+        foreground: 'theme:On Secondary Container', font_size: 15}
+      type: Label
+      layout_properties: {}
+    - name: opponent2_name
+      properties: {text: B, align: center, visible: true, spacing_above: small, spacing_below: small,
+        font_size: 25, foreground: 'theme:On Primary Container', bold: false}
+      type: Label
+      data_bindings:
+      - {property: text, code: 'self.item[''opponentB'']', writeback: false}
+      layout_properties: {}
+    - name: opponent2_img
+      properties: {height: '80', source: 'data:image/jpeg;base64,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',
+        spacing_above: medium, spacing_below: medium}
+      type: Image
+      layout_properties: {width: 188}
+      data_bindings:
+      - {property: source, code: 'self.item[''opponentB_image'']', writeback: false}
+    layout_properties: {}
+  - name: column_panel_bet_buttons
+    properties: {col_spacing: medium, background: ''}
+    type: ColumnPanel
+    layout_properties: {}
+    components:
+    - name: win_opponent1
+      properties: {text: 'Win A - Odds: 0.6 ', role: filled-button, align: full, foreground: '',
+        font_size: 15}
+      type: Button
+      layout_properties: {grid_position: 'FRDAZV,URQBRJ'}
+      data_bindings:
+      - {property: text, code: '''Win '' + self.item[''opponentA''] + '' - Odds: ''
+          + str(self.item[''odds_A''])', writeback: false}
+      event_bindings: {click: win_opponent1_click}
+    - name: draw
+      properties: {text: 'Draw - Odds: 0.1', role: filled-button, align: full, font_size: 15}
+      type: Button
+      layout_properties: {grid_position: 'FRDAZV,MKENBP'}
+      data_bindings:
+      - {property: text, code: '''Draw - Odds: '' + str(self.item[''odds_draw''])',
+        writeback: false}
+      event_bindings: {click: draw_click}
+    - name: win_opponent2
+      properties: {text: 'Win B - Odds: 0.3', role: filled-button, align: full, font_size: 15}
+      type: Button
+      layout_properties: {grid_position: 'FRDAZV,HXAANC'}
+      data_bindings:
+      - {property: text, code: '''Win '' + self.item[''opponentB''] + '' - Odds: ''
+          + str(self.item[''odds_B''])', writeback: false}
+      event_bindings: {click: win_opponent2_click}
