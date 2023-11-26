@@ -25,7 +25,7 @@ class BetBook(BetBookTemplate):
         self.balance = self.smart_contract.get_balance()
         self.address =self.smart_contract.get_address()
         address = self.address[:5] + '..' + self.address[-3:]
-        self.balance_label.text = f'Connected Address: {address}     Balace: {str(self.balance)} ETH'
+        self.balance_label.text = f'Connected Address: {address}     Balance: {str(self.balance)} ETH'
       except Exception as e:
         print(e)
         # error help messages
