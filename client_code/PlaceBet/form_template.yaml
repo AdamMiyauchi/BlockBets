@@ -63,7 +63,7 @@ components:
       type: Label
       layout_properties: {}
     - name: bet_amount
-      properties: {placeholder: $100, role: null, type: number}
+      properties: {placeholder: 10, role: null, type: number}
       type: TextBox
       layout_properties: {width: 257}
     - name: error_label
